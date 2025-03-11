@@ -46,7 +46,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 		
 		<nav>
-			<h1 lang="zh-HK" class="nav_grid_title"><b>聖公會主愛堂</b></h1>
+			<h1 lang="zh-HK" class="nav_grid_title"><a href="https://dwk.hkskh.org/divinelove/index.aspx"><b>聖公會主愛堂</b></a></h1>
 			
 			<div class="nav_grid_links">
 				<a lang="zh-HK" class="nav_link_1" href=" ">首頁</a>
@@ -59,14 +59,14 @@
 			<div class="nav_grid_gap">gap</div>
 			<div class="nav_grid_actions">
 				<a lang="zh-HK" class="nav_action_1">Action 1</a>
-				<a lang="zh-HK" class="nav_action_2">加入 FB !</a>
+				<a lang="zh-HK" class="nav_action_2">關注FB !</a>
 			</div>
 		</nav>
 
 		<div class="banner">
 
 			<img src="images/emblem.svg" id="banner_emblem">
-			<div class="banner_godray">Godray</div>
+			<div class="banner_godray">godray</div>
 			<p lang="zh-HK" class="banner_title"></p>
 
 			<script>
@@ -104,6 +104,7 @@
 		</div>
 
 		<section class="affl">
+			<div class="affl_fade_start"></div>
 			<div class="affl_grid">
 
 				<!-- Title -->
@@ -169,7 +170,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="affl_fade"></div>
+			<div class="affl_fade_end"></div>
 		</section>
 
 		<section class="news">
@@ -178,7 +179,7 @@
 			<div class="news_grid">
 				<div class="news_grid_nav">
 
-					<div class="news_grid_nav_button_grid">
+					<div class="news_grid_nav_button_grid" id="news_button_first">
 						<h3 class="news_grid_nav_button_grid_serial">#1</h3>
 						<h4 lang="zh-HK" class="news_grid_nav_button_grid_title">資訊1</h4>
 						<h5 lang="zh-HK" class="news_grid_nav_button_grid_subtitle">副標題</h5>
@@ -202,7 +203,7 @@
 						<h5 lang="zh-HK" class="news_grid_nav_button_grid_subtitle">副標題</h5>
 					</div>
 
-					<div class="news_grid_nav_button_grid">
+					<div class="news_grid_nav_button_grid" id="news_button_last">
 						<h3 class="news_grid_nav_button_grid_serial">#5</h3>
 						<h4 lang="zh-HK" class="news_grid_nav_button_grid_title">資訊5</h4>
 						<h5 lang="zh-HK" class="news_grid_nav_button_grid_subtitle">副標題</h5>
@@ -213,7 +214,7 @@
 				<div class="news_grid_content">
 					<h3 lang="zh-HK">資訊1</h3>
 					<h4 lang="zh-HK">副標題</h4>
-					<div class="news_grid_content_preview">Image</div>
+					<div class="news_grid_content_preview">[ Image ]</div>
 					<p>
 						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 					</p>
@@ -225,8 +226,45 @@
 		<section class="about">
 			<h2 lang="zh-HK" class="header_right">關於我們</h2>
 			<div class="about_grid">
-				
+				<div class="about_grid_slideshow">
+					<div class="about_grid_slideshow_left">&#60;</div>
+					<div class="about_grid_slideshow_right">&#62;</div>
+				</div>
+				<h3 lang="zh-HK">聯絡我們<br></h3>
+				<h6 lang="zh-HK">副標題</h6>
+				<div class="about_grid_text">
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					<br><br>
+					It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+				</div>
 			</div>
+		</section>
+
+		<section class="committee">
+			<h2 lang="zh-HK" class="header_center">我們的同工架構</h2>
+			<div class="committee_grid">
+				<div class="committee_grid_left">
+					<img src="images/person.svg">
+					<h4 lang="zh-HK">劉<br>子<br>睿</h4>
+					<p>牧<br>師</p>
+				</div>
+
+				<div class="committee_grid_right_top">
+					<img src="images/person.svg">
+					<h4 lang="zh-HK">黃穎鴻</h4>
+					<p lang="zh-HK">幹事</p>
+				</div>
+
+				<div class="committee_grid_right_bottom">
+					<img src="images/person.svg">
+					<h4 lang="zh-HK">羅惠琳</h4>
+					<p lang="zh-HK">司琴</p>
+				</div>
+			</div>
+		</section>
+		
+		<section class="credits">
+			<h1>Website presented by <b>Designation HKE</b> - Founded by <b>IHOKE</b></h1>
 		</section>
 
 		<footer>

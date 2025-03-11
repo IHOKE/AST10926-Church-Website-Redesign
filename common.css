@@ -30,7 +30,8 @@ body {
 
 .header_left {
     height:80px;
-    width:60vw;
+	min-width:300px;
+	width:30vw;
 
     border-radius:0 var(--header-border-radius) var(--header-border-radius) 0 ;
     align-content:center;
@@ -47,11 +48,13 @@ body {
 
 .header_right {
     height:80px;
-    width:60vw;
+	min-width:300px;
+	width:30vw;
 
     border-radius: var(--header-border-radius) 0 0 var(--header-border-radius);
     align-content:center;
-    padding-left:5vw;
+	text-align:right;
+	padding-right:5vw;
 
 	margin-left:auto;
 
@@ -61,7 +64,26 @@ body {
     font-size:40px;
     font-weight:500px;
 
-    filter:drop-shadow(-5px 5px 5px rgba(0, 0, 0, 0.5));
+    filter:drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+.header_center {
+	height:80px;
+	min-width:450px;
+	width:30vw;
+
+	border-radius: var(--header-border-radius);
+	align-content:center;
+	text-align:center;
+	margin:0px auto 0px auto;
+
+	background-color:var(--color-primary-1);
+    color:var(--color-font-white);
+
+	font-size:40px;
+    font-weight:500px;
+
+	filter:drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5));
 }
 
 /* Nav Bar */
@@ -102,7 +124,7 @@ nav {
 }
 
 /* Nav Title */
-.nav_grid_title {
+.nav_grid_title{
 	grid-area: nav_grid_title;
 
 	min-width:150px;
@@ -111,6 +133,11 @@ nav {
 	margin-left:3vw;
 
 	font-size:20px;
+}
+
+.nav_grid_title a{
+	text-decoration: none;
+	color:var(--color-font-white);
 }
 
 /* Nav Links */
@@ -130,6 +157,9 @@ nav {
 
 	--width-budget-per-letter:35px;
 	max-width:200px;
+
+	background-color: var(--color-primary-1);
+	transition: background-color 0.5s ease-in-out;
 
 	text-align: center;
 	align-content: center;
@@ -170,8 +200,6 @@ nav {
 
 .nav_grid_links a:hover {
 	background-color:var(--color-highlight);
-	transition:ease-in-out;
-	transition-duration: 0.35s;
 }
 
 /* Nav Gap */
@@ -205,6 +233,9 @@ nav {
 	border-style: solid;
 	border-radius: 100px;
 
+	background-color:var(--color-primary-1);
+	transition: background-color, border-color 1s ease-out;
+
 	align-content: center;
 	margin:0px 10px 0px 10px;
 	padding:3px 5px 5px 5px;
@@ -215,7 +246,6 @@ nav {
 	background-color: var(--color-highlight);
 	border-color: var(--color-highlight);
 
-	transition: ease-in-out ;
 	transition-duration: 0.35s;
 }
 
@@ -227,25 +257,42 @@ nav {
 	grid-area: nav_action_2;
 }
 
-@media (max-width: 1000px) {.nav_action_1 {display: none;}}
+@media (max-width: 1200px) {.nav_action_1 {display: none;}}
 
-/* Extends the HTML to test */
-.extender {
-	height:1500px;
-	background-color: var(--body-background-color);
+/* Credits */
+.credits {
+	height:35px;
+	width:100%;
+
+	background-color:var(--color-highlight);
+	text-align:center;
+	align-content:center;
 }
+
+.credits h1 {
+	color:white;
+	display:inline;
+
+	font-size:15px;
+	font-weight:100;
+}
+
+.credits b { font-weight:500; }
 
 /* Starting of Footer */
 footer {
-	padding-left:3vw;
+	display:block;
+	padding:0px 3vw 0px 3vw;
 	height:150px;
 	background-color:var(--color-primary-1);
 }
 
 footer h6{
-	color:var(--color-font-white);
-	padding-top:20px;
+	display:inline;
+	position:relative;
+	top:15px;
 
+	color:var(--color-font-white);
 	font-size:30px;
 }
 
@@ -254,7 +301,7 @@ footer h6{
 	gap: 0px 0px;
 	
 	position:relative;
-	top:-150px;
+	top:-65px;
 
 	color:var(--color-font-white);
 
@@ -265,11 +312,12 @@ footer h6{
 }
 
 .footer_grid div h6 {
+	display:inline;
 	font-size:22px;
 	font-weight:400;
 
 	position:relative;
-	top:20px;
+	top:90px;
 }
 
 .footer_grid div p {
@@ -277,7 +325,7 @@ footer h6{
 	font-weight:200;
 
 	position:relative;
-	top:-30px;
+	top:75px;
 }
 
 .footer_grid_gap {
@@ -295,3 +343,9 @@ footer h6{
 .footer_grid_fax { grid-area:footer_grid_fax; }
 .footer_grid_phone { grid-area:footer_grid_phone; }
 .footer_grid_email { grid-area:footer_grid_email; }
+
+/* Extends the HTML to test */
+.extender {
+	height:1500px;
+	background-color: var(--body-background-color);
+}
